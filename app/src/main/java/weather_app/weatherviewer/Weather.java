@@ -19,8 +19,8 @@ public class Weather {
         numberFormat.setMaximumFractionDigits(0);
 
         this.dayOfWeek = convertTimeStampToDay(timeStamp);
-        this.minTemp = numberFormat.format(minTemp) + "\u00B0F";
-        this.maxTemp = numberFormat.format(maxTemp) + "\u00B0F";
+        this.minTemp = numberFormat.format(minTemp) + "\u00B0C";
+        this.maxTemp = numberFormat.format(maxTemp) + "\u00B0C";
         this.humidity = NumberFormat.getPercentInstance().format(humidity / 100.0);
         this.description = description;
         this.iconURL = "https://openweathermap.org/img/w/" + iconName + ".png";
