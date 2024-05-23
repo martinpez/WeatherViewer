@@ -101,8 +101,6 @@ public class MainActivity extends AppCompatActivity {
         tem_day.setText(saludo);
 
     }
-
-
     private void dismissKeyboard(View view) {
         InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
@@ -120,7 +118,6 @@ public class MainActivity extends AppCompatActivity {
         }
         return null;
     }
-
     private class GetWeatherTask extends AsyncTask<URL, Void, JSONObject> {
         @Override
         protected JSONObject doInBackground(URL... params) {
@@ -158,7 +155,6 @@ public class MainActivity extends AppCompatActivity {
             }
             return null;
         }
-
         @Override
         protected void onPostExecute(JSONObject weather) {
             if (weather != null) {
@@ -168,7 +164,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
-
     private void convertJSONtoArrayList(JSONObject forecast) {
         weatherList.clear(); // clear old weather data
         try {
@@ -191,7 +186,6 @@ public class MainActivity extends AppCompatActivity {
                         weather.getString("icon"))); // icon name
                 System.out.println("json " +weather);
             }
-
         } catch (JSONException e) {
             e.printStackTrace();
         }
